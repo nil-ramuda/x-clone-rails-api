@@ -10,7 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup reviewdog
-        run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
+        run: |
+          curl -OL https://github.com/reviewdog/reviewdog/releases/download/v0.14.1/reviewdog_0.14.1_Linux_x86_64.tar.gz
+          tar -zxvf reviewdog_0.14.1_Linux_x86_64.tar.gz
+          mkdir -p $HOME/bin
+          mv reviewdog $HOME/bin/
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
