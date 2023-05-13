@@ -44,6 +44,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'rubocop-hc', require: false, github: 'ihatov08/rubocop-hc'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
