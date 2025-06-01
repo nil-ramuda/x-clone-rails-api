@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   db:
     image: postgres:14.6
@@ -13,7 +13,7 @@ services:
       - .:/myapp
       - bundle:/usr/local/bundle
     ports:
-      - "3000:3000"
+      - "3055:3000"
     depends_on:
       - db
 volumes:
